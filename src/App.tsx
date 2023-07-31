@@ -1,8 +1,7 @@
-import { useState } from "react";
+
 import { SiTailwindcss } from "react-icons/si";
 import MouseAura from "./components/MouseAura";
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
