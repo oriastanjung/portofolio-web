@@ -1,13 +1,20 @@
-import ButtonArrowDown from "../../../components/ButtonArrowDown";
+// import ButtonArrowDown from "../../../components/ButtonArrowDown";
+import ButtonWithArrow from "../../../components/ButtonWithArrow";
 function AboutSection() {
+  const downloadCVhandler = () => {
+    const file = "/cv.pdf";
+    window.open(file, "_blank")
+  }
   return (
     <section
       id="about-me"
       className="mt-28  bg-bgBlack text-white flex flex-col"
     >
-      <div className="container mx-auto px-20 flex flex-col text-center items-center justify-center gap-10">
-        <h3 className="font-semibold text-2xl">Hi, {"I'm"} Orias. Nice to meet you.</h3>
-        <p className="text-xl font-normal w-3/4">
+      <div className="container mx-auto px-5 md:px-20 flex flex-col text-center items-center justify-center gap-8">
+        <h3 className="font-semibold text-xl md:text-2xl">
+          Hi, {"I'm"} Orias. Nice to meet you.
+        </h3>
+        <p className="text-md md:text-xl font-light md:font-normal md:w-3/4">
           I am an undergraduate Computer Science student, but I am highly
           motivated to work, with 3 years of experience in Fullstack Web
           Development, but more speacilizing in Frontend Development. I am
@@ -18,9 +25,7 @@ function AboutSection() {
           job opportunity to further enhance my abilities and support the
           company's goals.{" "}
         </p>
-      </div>
-      <div className="mt-48 flex justify-center items-center">
-        <ButtonArrowDown title={"Experience"} to={"/#experience"} />
+        <ButtonWithArrow onClick={downloadCVhandler}>My Resume</ButtonWithArrow>
       </div>
     </section>
   );

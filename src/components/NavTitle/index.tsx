@@ -6,10 +6,10 @@ function NavTitle() {
   return (
     <h1
       onClick={() => navigation("/")}
-      className="flex gap-4 cursor-pointer items-center font-bold text-2xl"
+      className="flex px-5 md:px-0 gap-4 cursor-pointer items-center font-bold text-2xl"
     >
       <img className="w-10" src={logoDarkTheme} alt="logo-oriastanjung" />
-      O. RIASTANJUNG
+      <span className="hidden md:block">O. RIASTANJUNG</span>
     </h1>
   );
 }
