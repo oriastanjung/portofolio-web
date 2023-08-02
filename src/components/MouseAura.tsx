@@ -19,7 +19,7 @@ const MouseAura: React.FC = () => {
 
   return (
     <div
-      className="fixed -top-5 -left-5 pointer-events-none z-50"
+      className="hidden md:block md:fixed -top-5 -left-5 pointer-events-none z-50"
       style={{
         transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
       }}

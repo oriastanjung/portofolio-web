@@ -5,16 +5,14 @@ function App() {
 
   return (
     <>
-      <div className="bg-bgBlack h-screen">
-        <div className="w-full">
-          <SiTailwindcss className="w-64 h-64 text-black" />
-        </div>
-        <h1 className="container mx-auto text-customGreen font-extrabold">
-          hello world
+      <div className="container mx-auto bg-bgBlack h-screen flex justify-center items-center gap-5">
+        
+        <h1 className=" text-lg text-center font-semibold text-customGreen font-extrabold">
+          Hi, Currently my portofolio is on big update, so stay tune. {" O. Riastanjung - August 2023"}
         </h1>
-        <h1 className="container mx-auto text-white font-extrabold">
-          hello world
-        </h1>
+        <p className="text-lg text-center font-medium text-white">or you can see my portofolio in Linkedin</p>
+        <a className="text-md text-center font-medium text-white" href="https://www.linkedin.com/in/oriastanjung/">My Account</a>
+        
         <MouseAura />
       </div>
     </>
