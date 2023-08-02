@@ -4,8 +4,8 @@ import MouseAura from "./components/MouseAura";
 function App() {
 
   return (
-    <>
-      <div className="container mx-auto bg-bgBlack h-screen flex flex-col w-full justify-center items-center gap-5">
+    <div className=" bg-bgBlack h-screen w-full">
+      <div className="container mx-auto flex flex-col w-full justify-center items-center gap-5">
         
         <h1 className=" text-lg text-center font-semibold text-customGreen font-extrabold">
           Hi, Currently my portofolio is on big update, so stay tune. {" O. Riastanjung - August 2023"}
@@ -15,7 +15,7 @@ function App() {
         
         <MouseAura />
       </div>
-    </>
+    </div>
   );
 }
 
