@@ -11,7 +11,7 @@ function App() {
           Hi, Currently my portofolio is on big update, so stay tune. {" O. Riastanjung - August 2023"}
         </h1>
         <p className="text-lg text-center font-medium text-white">or you can see my portofolio in Linkedin</p>
-        <a className="text-md text-center font-medium text-white" href="https://www.linkedin.com/in/oriastanjung/">My Account</a>
+        <a className="text-md text-center font-medium text-white bg-blue-500 px-3 py-2 rounded-lg" href="https://www.linkedin.com/in/oriastanjung/">My Account</a>
         
         <MouseAura />
       </div>
