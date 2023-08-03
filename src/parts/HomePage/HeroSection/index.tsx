@@ -13,7 +13,7 @@ function HeroSection() {
           </p>
         </div>
       </div>
-      <div className="mt-48 flex justify-center items-center">
+      <div className="mt-24 md:mt-48 flex justify-center items-center">
         <ButtonArrowDown title={"See More"} to={"/#about-me"}/>
       </div>
     </section>

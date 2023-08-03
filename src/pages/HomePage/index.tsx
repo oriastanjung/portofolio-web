@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar"
 import AboutSection from "../../parts/HomePage/AboutSection"
+import ExperienceSection from "../../parts/HomePage/ExperienceSection"
 import HeroSection from "../../parts/HomePage/HeroSection"
 import TechStacksSection from "../../parts/HomePage/TechStacksSection"
 
@@ -10,6 +11,8 @@ function HomePage() {
      <HeroSection />
      <AboutSection />
      <TechStacksSection />
+     <ExperienceSection />
+     
     </div>
   )
 }

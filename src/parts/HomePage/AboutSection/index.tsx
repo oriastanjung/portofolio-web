@@ -3,12 +3,12 @@ import ButtonWithArrow from "../../../components/ButtonWithArrow";
 function AboutSection() {
   const downloadCVhandler = () => {
     const file = "/cv.pdf";
-    window.open(file, "_blank")
-  }
+    window.open(file, "_blank");
+  };
   return (
     <section
       id="about-me"
-      className="mt-28  bg-bgBlack text-white flex flex-col"
+      className="mt-24 md:mt-48 md:pt-48 pt-24 bg-bgBlack text-white flex flex-col"
     >
       <div className="container mx-auto px-5 md:px-20 flex flex-col text-center items-center justify-center gap-8">
         <h3 className="font-semibold text-xl md:text-2xl">
@@ -25,7 +25,11 @@ function AboutSection() {
           job opportunity to further enhance my abilities and support the
           company's goals.{" "}
         </p>
-        <ButtonWithArrow onClick={downloadCVhandler}>My Resume</ButtonWithArrow>
+        <div className=" md:mt-12 mt-6 flex justify-center items-center">
+          <ButtonWithArrow onClick={downloadCVhandler}>
+            My Resume
+          </ButtonWithArrow>
+        </div>
       </div>
     </section>
   );
