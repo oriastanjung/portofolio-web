@@ -52,9 +52,9 @@ function PortofolioSection() {
                 </span>
               </div>
             </div>
-            <div className="mb-10 md:mb-0 md:w-2/3 w-full relative top-0 z-0 ">
+            <div className="overflow-hidden rounded-2xl mb-10 md:mb-0 md:w-2/3  w-full relative top-0 z-0 ">
               <img
-                className="w-full rounded-2xl"
+                className="w-full rounded-2xl transform hover:scale-110 hover:opacity-95 transition-transform duration-500 ease-in-out"
                 src={imgDummy}
                 alt="projects-1"
               />
