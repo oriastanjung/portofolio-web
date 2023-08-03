@@ -15,15 +15,11 @@ function AboutSection() {
           Hi, {"I'm"} Orias. Nice to meet you.
         </h3>
         <p className="text-md md:text-xl font-light md:font-normal md:w-3/4">
-          I am an undergraduate Computer Science student, but I am highly
-          motivated to work, with 3 years of experience in Fullstack Web
-          Development, but more speacilizing in Frontend Development. I am
-          proficient in modern technologies such as MERN tech, Tailwind CSS,
-          JEST, and React Testing Library. I am enthusiastic about contributing
-          with my skills, collaborating effectively within teams, and
-          continuously learning and adapting to new technologies. I am seeking a
-          job opportunity to further enhance my abilities and support the
-          company's goals.{" "}
+          Energetic CS undergraduate with 3 years of experience in Fullstack Web
+          Development, specializing in Frontend Development. Proficient in MERN,
+          Bootstrap CSS, Tailwind CSS, Redux, Jest, and RTL. Enthusiastic team
+          player eager to learn and grow. Seeking job opportunities to make
+          impactful contributions and support company goals.
         </p>
         <div className=" md:mt-12 mt-6 flex justify-center items-center">
           <ButtonWithArrow onClick={downloadCVhandler}>

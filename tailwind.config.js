@@ -16,7 +16,8 @@ export default {
         "customRed" : "#F32424",
         "customBlue" : "#4353AA",
         "customOrange" : "#F44C17",
-        "customDarkGreen" : "#019A8B"
+        "customDarkGreen" : "#019A8B",
+        "customGray" : "#A6AFBE"
       },
     },
   },

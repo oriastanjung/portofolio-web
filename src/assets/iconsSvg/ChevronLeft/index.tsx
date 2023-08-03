@@ -1,8 +1,7 @@
-interface IFChevronRight {
-  className: string,
-  strokeWidth? : string
+interface IFChevronLeftProps {
+  className: string;
 }
-function ChevronRight(props: IFChevronRight) {
+function ChevronLeft(props: IFChevronLeftProps) {
   return (
     <svg
       className={props.className}
@@ -11,9 +10,9 @@ function ChevronRight(props: IFChevronRight) {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M18.75 8.33325L33.3333 19.9999L18.75 31.6666"
+        d="M31.25 31.6666L16.6667 19.9999L31.25 8.33325"
         stroke="currentColor"
-        stroke-width={props.strokeWidth ? props.strokeWidth : "2"}
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -21,4 +20,4 @@ function ChevronRight(props: IFChevronRight) {
   );
 }
 
-export default ChevronRight;
+export default ChevronLeft;
