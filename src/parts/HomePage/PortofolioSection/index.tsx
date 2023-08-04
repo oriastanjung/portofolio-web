@@ -1,4 +1,3 @@
-import ButtonArrowDown from "../../../components/ButtonArrowDown";
 import imgDummy from "../../../assets/projects/alvacation.png";
 import Github from "../../../assets/iconsSvg/Github";
 import ExternalLink from "../../../assets/iconsSvg/ExternalLink";
