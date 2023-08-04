@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar"
 import AboutSection from "../../parts/HomePage/AboutSection"
+import AchievementsSection from "../../parts/HomePage/AchievementsSection"
 import ExperienceSection from "../../parts/HomePage/ExperienceSection"
 import HeroSection from "../../parts/HomePage/HeroSection"
 import PortofolioSection from "../../parts/HomePage/PortofolioSection"
@@ -16,6 +17,7 @@ function HomePage() {
      <ExperienceSection />
      <PortofolioSection />
      <ProjectsSection />
+     <AchievementsSection />
     </div>
   )
 }

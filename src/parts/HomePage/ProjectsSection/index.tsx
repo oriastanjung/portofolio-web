@@ -1,4 +1,3 @@
-import ButtonArrowDown from "../../../components/ButtonArrowDown";
 import ButtonWithArrow from "../../../components/ButtonWithArrow";
 import CardProject from "../../../components/CardProject";
 
@@ -10,7 +9,7 @@ function ProjectsSection() {
           Check out some of my latest Projects i works on.
         </p>
         
-        <div className="md:h-auto h-[20rem] snap-y overflow-y-scroll md:overflow-y-auto flex md:px-0 px-5 flex-wrap gap-4 justify-center items-center">
+        <div className="md:h-auto h-[30rem] snap-y overflow-y-scroll md:overflow-y-auto flex md:px-0 px-5 flex-wrap gap-4 justify-center items-center">
           <CardProject
             stack={["ReactJS", "Bootstrap CSS", "SASS", "Sass","Bootstrap CSS", "SASS", "Sass"]}
             description="This Website is based on my learning course at BuildWithAngga. This Website contain some places to go for vacation."
@@ -78,9 +77,6 @@ function ProjectsSection() {
         <ButtonWithArrow>
             Discover All
         </ButtonWithArrow>
-      </div>
-      <div className="mt-16 md:mt-28">
-        <ButtonArrowDown title={"Portofolio"} to={"#portofolio"} />
       </div>
     </section>
   );
