@@ -66,9 +66,6 @@ function PortofolioSection() {
           </div>
         </div>
       </div>
-      <div className="mt-16 md:mt-28">
-        <ButtonArrowDown title={"Portofolio"} to={"#portofolio"} />
-      </div>
     </section>
   );
 }

@@ -6,3 +6,17 @@
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
 }
+/* For Webkit browsers (Chrome, Safari, newer versions of Edge) */
+::-webkit-scrollbar {
+  height: 6px; /* Set the height to make it visible */
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #34364A;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00BDAA;
+  border-radius: 4px;
+}

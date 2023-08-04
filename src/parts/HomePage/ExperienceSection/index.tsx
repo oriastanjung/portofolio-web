@@ -41,7 +41,7 @@ function ExperienceSection() {
                   className={`${
                     activeExperience === item.id &&
                     "bg-black border-s-customGreen"
-                  } border-s-[3px] border-s-white px-8 py-4 hover:border-s-customGreen hover:bg-black`}
+                  } border-s-[3px]  px-8 py-4 hover:border-s-customGreen hover:bg-black`}
                 >
                   {item.company}
                 </button>
