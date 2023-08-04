@@ -71,8 +71,8 @@ function ProjectsSection() {
             title="Alvacation : Vacation anytime anywhere"
           />
         </div>
-        <p className="md:hidden text-sm md:text-xl font-light md:font-normal md:w-3/4">
-          You can scroll in there to see the projects.
+        <p className="text-customGreen italic md:hidden text-sm md:text-xl font-light md:font-normal md:w-3/4">
+          *You can scroll in there to see the projects.
         </p>
         <ButtonWithArrow>
             Discover All
