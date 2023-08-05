@@ -40,36 +40,7 @@ function ProjectsSection() {
             description="This Website is based on my learning course at BuildWithAngga. This Website contain some places to go for vacation."
             title="Alvacation : Vacation anytime anywhere"
           />
-          <CardProject
-            stack={["ReactJS", "Bootstrap CSS", "SASS", "Sass","Bootstrap CSS", "SASS", "Sass"]}
-            description="This Website is based on my learning course at BuildWithAngga. This Website contain some places to go for vacation."
-            title="Alvacation : Vacation anytime anywhere"
-          />
-          <CardProject
-            stack={["ReactJS", "Bootstrap CSS", "SASS"]}
-            description="This Website is based on my learning course at BuildWithAngga. This Website contain some places to go for vacation."
-            title="Alvacation : Vacation anytime anywhere"
-          />
-          <CardProject
-            stack={["ReactJS", "Bootstrap CSS", "SASS"]}
-            description="This Website is based on my learning course at BuildWithAngga. This Website contain some places to go for vacation."
-            title="Alvacation : Vacation anytime anywhere"
-          />
-          <CardProject
-            stack={["ReactJS", "Bootstrap CSS", "SASS", "Sass","Bootstrap CSS", "SASS", "Sass"]}
-            description="This Website is based on my learning course at BuildWithAngga. This Website contain some places to go for vacation."
-            title="Alvacation : Vacation anytime anywhere"
-          />
-          <CardProject
-            stack={["ReactJS", "Bootstrap CSS", "SASS"]}
-            description="This Website is based on my learning course at BuildWithAngga. This Website contain some places to go for vacation."
-            title="Alvacation : Vacation anytime anywhere"
-          />
-          <CardProject
-            stack={["ReactJS", "Bootstrap CSS", "SASS"]}
-            description="This Website is based on my learning course at BuildWithAngga. This Website contain some places to go for vacation."
-            title="Alvacation : Vacation anytime anywhere"
-          />
+          
         </div>
         <p className="text-customGreen italic md:hidden text-sm md:text-xl font-light md:font-normal md:w-3/4">
           *You can scroll in there to see the projects.
