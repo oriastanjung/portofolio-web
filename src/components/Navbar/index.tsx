@@ -1,29 +1,19 @@
 import NavTitle from "../NavTitle";
 import moonSvg from "../../assets/iconsSvg/moon.svg";
+import sunSvg from "../../assets/iconsSvg/sun.svg";
 import Menu from "../../assets/iconsSvg/Menu";
-import { useState } from "react";
 import Close from "../../assets/iconsSvg/Close";
-
+import {Fade} from "react-awesome-reveal"
+import useNavbar from "./useNavbar";
 function Navbar() {
-  function scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }
-  const [showMenu, setShowMenu] = useState(false);
-  const showMenuHandler = () => {
-    setShowMenu(!showMenu);
-  };
+  const {showMenuHandler, showMenu, scrollToSection, toggleTheme, currentTheme} = useNavbar()
   return (
-    <header className="sticky border-b-2 border-b-bgWhite top-0 z-50 bg-bgBlack w-full text-white py-3 ">
+    <header  className={`sticky border-b-2 ${currentTheme === "dark" ? "bg-bgBlack text-white border-b-bgWhite" : "bg-bgWhite text-black border-b-bgBlack" } top-0 z-50  py-3  w-full`}>
+      <Fade>
       <nav className="container mx-auto md:px-0 flex  justify-between items-center">
-        <NavTitle />
+        <NavTitle theme={currentTheme}/>
         <button className="px-5 md:px-0" onClick={showMenuHandler}>
-          <Menu className="block md:hidden cursor-pointer text-white w-8" />
+          <Menu className={`block md:hidden cursor-pointer  w-8`} />
         </button>
         <ul className="hidden md:flex gap-11  items-center">
           <li
@@ -50,20 +40,20 @@ function Navbar() {
           >
             CONTACT
           </li>
-          <li className="cursor-pointer font-semibold p-2 rounded-full hover:bg-gray-800">
-            <img className="w-5" src={moonSvg} alt="moon" />
+          <li onClick={toggleTheme} className={`cursor-pointer font-semibold p-2 rounded-full ${currentTheme === "dark" ? "hover:bg-gray-800" : "hover:bg-slate-200"}`}>
+            <img className="w-5" src={currentTheme === "dark" ? moonSvg : sunSvg} alt="moon" />
           </li>
         </ul>
         {showMenu && (
-          <ul className=" md:hidden h-screen flex justify-center items-center gap-16 flex-col fixed top-0 z-100 bg-bgBlack w-full">
+          <ul className={` md:hidden h-screen flex justify-center items-center gap-16 flex-col fixed top-0 z-100 ${currentTheme === "dark" ? "bg-bgBlack" : "bg-bgWhite"} w-full`}>
             <li className="flex items-center justify-end px-5 w-full">
               <button onClick={showMenuHandler}>
-                <Close className="w-8 text-white" />
+                <Close className="w-8 " />
               </button>
             </li>
             <li className="flex items-center justify-center w-full">
               <div className="flex flex-col items-center">
-                <NavTitle />
+                <NavTitle theme={currentTheme}/>
                 <h1 className="font-bold">ORIASTANJUNG</h1>
               </div>
             </li>
@@ -91,12 +81,13 @@ function Navbar() {
             >
               CONTACT
             </li>
-            <li className="cursor-pointer font-normal p-2 rounded-full hover:bg-gray-800">
-              <img className="w-5" src={moonSvg} alt="moon" />
+            <li onClick={toggleTheme} className="cursor-pointer font-normal p-2 rounded-full ">
+              <img className="w-5" src={currentTheme === "dark" ? moonSvg : sunSvg} alt="moon" />
             </li>
           </ul>
         )}
       </nav>
+      </Fade>
     </header>
   );
 }

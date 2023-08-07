@@ -8,10 +8,11 @@ import HeroSection from "../../parts/HomePage/HeroSection";
 import PortofolioSection from "../../parts/HomePage/PortofolioSection";
 import ProjectsSection from "../../parts/HomePage/ProjectsSection";
 import TechStacksSection from "../../parts/HomePage/TechStacksSection";
-
+import useThemes from "../../utils/Themes/useThemes";
 function HomePage() {
+  const {currentTheme} = useThemes()
   return (
-    <div className=" bg-bgBlack">
+    <div className={`${currentTheme === "dark" ? "bg-bgBlack" : "bg-bgWhite"}`}>
       <Navbar />
       <main>
         <HeroSection />

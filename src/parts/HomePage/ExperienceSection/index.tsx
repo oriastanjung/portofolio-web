@@ -2,7 +2,10 @@ import { useState } from "react";
 import Play from "../../../assets/iconsSvg/Play";
 import ButtonArrowDown from "../../../components/ButtonArrowDown";
 import useExperience, { IFexperienceData } from "../../../utils/Experience";
+import useThemes from "../../../utils/Themes/useThemes";
+import {Fade} from "react-awesome-reveal"
 function ExperienceSection() {
+  const {currentTheme} = useThemes()
   const { experienceData } = useExperience();
   const fromLatestData = experienceData.reverse();
   const [activeData, setActiveData] = useState<IFexperienceData | null>(
@@ -21,8 +24,9 @@ function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="mt-24 md:mt-48 md:pt-48 pt-24  bg-bgBlack text-white flex flex-col" 
+      className={`mt-24 md:mt-48 md:pt-48 pt-24 ${currentTheme === "dark" ? " bg-bgBlack text-white " : " bg-bgWhite text-black "} flex flex-col`} 
     >
+      <Fade  delay={1000} triggerOnce>
       <div className="container mx-auto px-5 md:px-20 flex flex-col text-center items-center justify-center gap-8 md:gap-10">
         <h3 className="font-semibold text-xl md:text-2xl">
           Experience I've Gained
@@ -33,15 +37,16 @@ function ExperienceSection() {
         <div className="flex flex-col md:flex-row gap-10">
           {/* check here */}
           <div className="flex flex-col md:w-1/3">
+
             {fromLatestData.map((item, key) => {
               return (
                 <button
                   onClick={() => onClick(item.id)}
                   key={key}
-                  className={`${
-                    activeExperience === item.id &&
-                    "bg-black border-s-customGreen"
-                  } border-s-[3px]  px-8 py-4 hover:border-s-customGreen hover:bg-black`}
+                  className={`${currentTheme === "dark" ? "text-white" : activeExperience === item.id && "bg-customGray text-white "} ${
+                    activeExperience === item.id && currentTheme === "dark" ?
+                    "bg-black  border-s-customGreen" : activeExperience === item.id && currentTheme === "light" && "border-s-white"
+                  } border-s-[3px]  px-8 py-4 hover:border-s-customGreen ${currentTheme === "dark" ? "hover:bg-black" : "hover:bg-customGray"} hover:text-white`}
                 >
                   {item.company}
                 </button>
@@ -74,9 +79,12 @@ function ExperienceSection() {
           </div>
         </div>
       </div>
+      </Fade>
+      <Fade delay={1500} triggerOnce direction="up">
       <div className="mt-16 md:mt-28">
         <ButtonArrowDown title={"Portofolio"} to={"#portofolio"} />
       </div>
+      </Fade>
     </section>
   );
 }

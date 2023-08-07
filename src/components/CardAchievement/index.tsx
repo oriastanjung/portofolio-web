@@ -1,3 +1,5 @@
+import useThemes from "../../utils/Themes/useThemes";
+
 interface IFCardAchievementProps {
   title?: string;
   credential?: string;
@@ -6,8 +8,9 @@ interface IFCardAchievementProps {
 }
 
 function CardAchievement(props: IFCardAchievementProps) {
+  const {currentTheme} = useThemes()
   return (
-    <div className="snap-center md:w-[20rem]  h-4/5 md:h-full rounded-2xl  transform transition-transform duration-500 cursor-pointer  hover:border-customGreen hover:duration-300 bg-bgWhite backdrop-blur-[0.5px] bg-opacity-[8%] border-[1px] border-bgWhite  flex flex-col items-end">
+    <div className={`snap-center md:w-[20rem]  h-4/5 md:h-full rounded-2xl  transform transition-transform duration-500 cursor-pointer  hover:border-customGreen hover:duration-300 ${currentTheme === "dark" ? "bg-bgWhite backdrop-blur-[0.5px] bg-opacity-[8%] border-bgWhite" : "bg-bgBlack text-white"} border-[1px]   flex flex-col items-end`}>
       <img className="object-cover w-full rounded-ss-2xl rounded-se-2xl" src={props.img} alt={props.title} />
       <div className="w-full px-4 py-6 flex flex-col ">
         <h6 className="text-base text-left md:text-xl font-semibold mb-3 mt-1">

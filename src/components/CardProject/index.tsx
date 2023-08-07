@@ -1,6 +1,7 @@
 import Github from "../../assets/iconsSvg/Github";
 import ExternalLink from "../../assets/iconsSvg/ExternalLink";
 import Folder from "../../assets/iconsSvg/Folder";
+import useThemes from "../../utils/Themes/useThemes";
 interface IFCardProjectProps {
   className?: string;
   title?: string;
@@ -9,8 +10,9 @@ interface IFCardProjectProps {
 }
 
 function CardProject(props: IFCardProjectProps) {
+  const {currentTheme} = useThemes()
   return (
-    <div className="snap-center hover:scale-[103%] transform transition-transform duration-500 cursor-pointer w-[20rem] md:w-[25rem] px-4 py-6 hover:border-customGreen hover:duration-300 bg-bgWhite backdrop-blur-[0.5px] bg-opacity-[8%] border-[1px] border-bgWhite rounded-2xl flex flex-col items-start justify-start">
+    <div className={`snap-center hover:scale-[103%] transform transition-transform duration-500 cursor-pointer w-[20rem] md:w-[25rem] px-4 py-6 hover:border-customGreen ${currentTheme === "dark" ? " border-bgWhite bg-bgWhite backdrop-blur-[0.5px] bg-opacity-[8%]" : "bg-bgBlack text-white "} hover:duration-300  border-[1px]  rounded-2xl flex flex-col items-start justify-start`}>
       <div className="flex items-start justify-between w-full">
         <div>
           <Folder className="cursor-pointer w-10 h-10 text-white hover:text-customGreen" />
