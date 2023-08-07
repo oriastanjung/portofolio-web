@@ -32,7 +32,7 @@ function TechStacksSection() {
               </ul>
             </CardTech>
           </Fade>
-          <Fade triggerOnce delay={2500} direction="up">
+          <Fade className="w-full md:w-auto md:h-full h-auto" triggerOnce delay={2500} direction="up">
             <CardTech title="Backend">
               <ul className="flex flex-col gap-5 items-start">
                 {backend.map((item, idx) => {
@@ -43,7 +43,7 @@ function TechStacksSection() {
               </ul>
             </CardTech>
           </Fade>
-          <Fade triggerOnce delay={3000} direction="right">
+          <Fade className="w-full md:w-auto md:h-full h-auto" triggerOnce delay={3000} direction="right">
             <CardTech title="Database">
               <ul className="flex flex-col gap-5 items-start">
                 {database.map((item, idx) => {

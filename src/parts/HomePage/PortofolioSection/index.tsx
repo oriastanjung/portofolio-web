@@ -9,7 +9,7 @@ function PortofolioSection() {
   return (
     <section
       id="portofolio"
-      className="mt-24 md:mt-48 md:pt-48 md:pb-48  bg-bgBlack text-white flex flex-col"
+      className="mt-24 md:mt-48 md:pt-48 py-12 md:pb-48  bg-bgBlack text-white flex flex-col"
     >
       <Fade delay={1000} triggerOnce className="container mx-auto px-5 md:px-20 flex flex-col text-center items-center justify-center gap-8 md:gap-10">
         <h3 className="font-semibold text-xl md:text-2xl">
