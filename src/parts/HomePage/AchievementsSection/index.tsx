@@ -1,6 +1,6 @@
 import ButtonArrowDown from "../../../components/ButtonArrowDown";
 import CardAchievement from "../../../components/CardAchievement";
-import imgDummy from "../../../assets/achievements/dicoding-1.png";
+// import imgDummy from "../../../assets/achievements/dicoding-1.png";
 import { Link } from "react-router-dom";
 import ChevronRight from "../../../assets/iconsSvg/ChveronRight";
 import useThemes from "../../../utils/Themes/useThemes";
