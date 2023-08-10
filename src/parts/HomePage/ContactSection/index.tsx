@@ -38,13 +38,13 @@ function ContactSection() {
           </p>
           <div className="mt-8 md:mt-0 md:fixed left-0 bottom-0 px-16 flex md:flex-col gap-4 items-center justify-center">
             <div className="flex flex-row md:flex-col justify-center items-center gap-8">
-              <Link className="" to={""} target="_blank">
+              <Link className="" to={"https://www.linkedin.com/in/oriastanjung/"} target="_blank">
                 <Linkedin className={`w-6 md:w-10 hover:text-customGreen ${currentTheme === "dark" ? "text-white" : "text-black"}`} />
               </Link>
-              <Link className="" to={""} target="_blank">
+              <Link className="" to={"https://github.com/oriastanjung"} target="_blank">
                 <Github className={`w-6 md:w-10 hover:text-customGreen ${currentTheme === "dark" ? "text-white" : "text-black"}`} />
               </Link>
-              <Link className="" to={""} target="_blank">
+              <Link className="" to={"https://www.instagram.com/o.rias_/"} target="_blank">
                 <Instagram className={`w-6 md:w-10 hover:text-customGreen ${currentTheme === "dark" ? "text-white" : "text-black"}`} />
               </Link>
             </div>

@@ -51,7 +51,7 @@ function CardProject(props: IFCardProjectProps) {
       {props.stack && (
         <ul
           className={`flex flex-row gap-6 w-full pb-4 ${
-            props.stack.length > 4 ? "overflow-x-scroll" : "overflow-x-hidden"
+            props.stack.length > 2 ? "overflow-x-auto" : "overflow-x-hidden"
           } snap-x overflow-y-auto max-h-16`}
         >
           {props.stack.map((item, i) => {

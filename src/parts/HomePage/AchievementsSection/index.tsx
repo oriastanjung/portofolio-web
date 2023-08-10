@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import ChevronRight from "../../../assets/iconsSvg/ChveronRight";
 import useThemes from "../../../utils/Themes/useThemes";
 import { Fade } from "react-awesome-reveal";
-
+import useAchievements from "../../../utils/Achievements";
 function AchievementsSection() {
   const { currentTheme } = useThemes();
+  const { dataAllAchievements } = useAchievements();
   return (
     <section
       className={`mt-16 md:mt-24  ${
@@ -23,65 +24,18 @@ function AchievementsSection() {
           </p>
           {/* carousel starts in here */}
 
-          <div className=" snap-x overflow-x-scroll flex h-[29rem] w-full overflow-y-hidden md:py-10 gap-2 md:gap-6 justify-start items-center md:justify-start md:items-start ">
-            <CardAchievement
-              img={imgDummy}
-              title="Frontend Developer"
-              credential="XYHD018U244192"
-              stack={["ReactJS"]}
-            />
-            <CardAchievement
-              img={imgDummy}
-              title="Frontend Developer"
-              credential="XYHD018U244192"
-              stack={["ReactJS", "xyz"]}
-            />
-            <CardAchievement
-              img={imgDummy}
-              title="Frontend Developer"
-              credential="XYHD018U244192"
-              stack={["ReactJS", "Bootstrap CSS", "Javascript"]}
-            />
-            <CardAchievement
-              img={imgDummy}
-              title="Frontend Developer"
-              credential="XYHD018U244192"
-              stack={[
-                "ReactJS",
-                "Bootstrap CSS",
-                "Javascript",
-                "ReactJS",
-                "Bootstrap CSS",
-                "Javascript",
-              ]}
-            />
+          <div className=" snap-x overflow-x-scroll flex h-[35rem] w-full overflow-y-hidden md:py-10 gap-2 md:gap-6 justify-start items-center md:justify-start md:items-start ">
+            {dataAllAchievements.map((item, i) => (
+              <CardAchievement
+                websiteUrl={item.websiteUrl}
+                img={item.srcThumbnail}
+                title={item.title}
+                credential={item.credential}
+                stack={item.stack}
+              />
+            ))}
 
-            <CardAchievement
-              img={imgDummy}
-              title="Frontend Developer"
-              credential="XYHD018U244192"
-              stack={[
-                "ReactJS",
-                "Bootstrap CSS",
-                "Javascript",
-                "ReactJS",
-                "Bootstrap CSS",
-                "Javascript",
-              ]}
-            />
-            <CardAchievement
-              img={imgDummy}
-              title="Frontend Developer"
-              credential="XYHD018U244192"
-              stack={[
-                "ReactJS",
-                "Bootstrap CSS",
-                "Javascript",
-                "ReactJS",
-                "Bootstrap CSS",
-                "Javascript",
-              ]}
-            />
+           
           </div>
           <Link
             className="mt-5 flex items-center hover:underline font-semibold md:font-bold text-sm md:text-base"
