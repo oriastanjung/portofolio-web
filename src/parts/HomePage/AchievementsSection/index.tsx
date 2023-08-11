@@ -27,6 +27,7 @@ function AchievementsSection() {
           <div className=" snap-x overflow-x-scroll flex h-[35rem] w-full overflow-y-hidden md:py-10 gap-2 md:gap-6 justify-start items-center md:justify-start md:items-start ">
             {dataAllAchievements.map((item, i) => (
               <CardAchievement
+                key={i}
                 websiteUrl={item.websiteUrl}
                 img={item.srcThumbnail}
                 title={item.title}
