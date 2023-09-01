@@ -80,6 +80,24 @@ function Projects() {
       isFeatured : false
     },
     {
+      id: "25",
+      title: `ShoeCraft -  Ecommerce App`,
+      description:
+        "This is Fullstack E-Commerce App build using MERN Stack with TailwindCSS and Material UI for the Dashboard. It Integrated with Midtrans Payment Gateway to handle the transactions. ",
+      stack: [
+        "ReactJS",
+        "CSS",
+        "MongoDB",
+        "ExpressJS",
+        "NodeJS",
+        "Sweet Alert",
+      ],
+      websiteUrl : "https://shoecraft.vercel.app/",
+      githubLink : "https://shoecraft.vercel.app/",
+      srcThumbnail: "/projects/shoecraft/thumbnail.png",
+      isFeatured : true
+    },
+    {
       id: "7",
       title: "Alvaction - Always Vacation",
       description:
@@ -312,6 +330,7 @@ function Projects() {
         srcThumbnail: "/projects/just-do-it/thumbnail.png",
         isFeatured : false
       },
+      
   ];
   const dataProjectsLandingPage : Array<IFDataProjects> = [...dataAllProjects].reverse().slice(0,6)
   const featuredProjects : Array<IFDataProjects> = [...dataAllProjects].filter((item) => item.isFeatured === true)
